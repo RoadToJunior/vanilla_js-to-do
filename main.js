@@ -1,7 +1,8 @@
-const removeItem = () => {
-  console.log("ok");
+const removeTask = (e) => {
+  e.target.parentNode.style.textDecoration = "line-through";
+  e.target.remove();
 };
 
 document
-  .querySelectorAll("li")
-  .forEach((item) => item.addEventListener("click", removeItem));
+  .querySelectorAll("li button")
+  .forEach((item) => item.addEventListener("click", removeTask));
